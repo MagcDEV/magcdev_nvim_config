@@ -5,8 +5,11 @@ vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
 
 require("config.lazy")
-require("catppuccin").setup()
-vim.cmd.colorscheme("catppuccin")
+require("ibl").setup()
+--require("catppuccin").setup()
+--vim.cmd.colorscheme("catppuccin-mocha")
+require("onedark").load()
+--vim.cmd.colorscheme("onedark")
 
 -- Set the background transparency for Neovim
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
