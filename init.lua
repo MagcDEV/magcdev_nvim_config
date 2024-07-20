@@ -3,6 +3,9 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.cmd("set number")
+vim.cmd("set nobackup")
+vim.cmd("set nowritebackup")
+vim.cmd("set noswapfile")
 
 require("config.lazy")
 require("ibl").setup()
@@ -26,5 +29,8 @@ vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
 vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
 vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
 vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
+-- map :tabn and :tabp to F7 and F8
+vim.keymap.set("n", "<F7>", ":tabn<CR>", {})
+vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
 
 vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal toggle right<CR>", {})
