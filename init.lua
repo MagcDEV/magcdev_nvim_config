@@ -6,6 +6,7 @@ vim.cmd("set number")
 vim.cmd("set nobackup")
 vim.cmd("set nowritebackup")
 vim.cmd("set noswapfile")
+vim.cmd("set rnu")
 
 require("config.lazy")
 require("ibl").setup()
