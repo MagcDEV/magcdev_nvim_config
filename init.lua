@@ -7,12 +7,17 @@ vim.cmd("set nobackup")
 vim.cmd("set nowritebackup")
 vim.cmd("set noswapfile")
 vim.cmd("set rnu")
+vim.cmd("set cursorline")
+vim.opt.shadafile = "NONE"
 
 require("config.lazy")
 require("ibl").setup()
+
+vim.cmd.colorscheme("kanagawa")
+
 --require("catppuccin").setup()
 --vim.cmd.colorscheme("catppuccin-mocha")
-require("onedark").load()
+--require("onedark").load()
 --vim.cmd.colorscheme("onedark")
 
 -- Set the background transparency for Neovim
@@ -34,4 +39,10 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<F7>", ":tabn<CR>", {})
 vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
 
-vim.keymap.set("n", "<leader>n", ":Neotree filesystem reveal toggle right<CR>", {})
+-- buffer navigation
+vim.keymap.set("n", "<leader>b", ":b#<CR>", {})
+vim.keymap.set("n", "<leader>n", ":n#<CR>", {})
+
+vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
+
+vim.keymap.set("n", "<leader>f", ":Neotree filesystem reveal toggle right<CR>", {})
