@@ -39,6 +39,9 @@ vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 vim.keymap.set("n", "<F7>", ":tabn<CR>", {})
 vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
 
+-- file navigation
+vim.keymap.set("n", "<leader>e", ":Ex<CR>", {})
+
 -- buffer navigation
 vim.keymap.set("n", "<leader>b", ":b#<CR>", {})
 vim.keymap.set("n", "<leader>n", ":n#<CR>", {})
@@ -46,3 +49,11 @@ vim.keymap.set("n", "<leader>n", ":n#<CR>", {})
 vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
 
 vim.keymap.set("n", "<leader>f", ":Neotree filesystem reveal toggle right<CR>", {})
+
+  -- Set the shell to PowerShell 7
+if vim.fn.has('win32') == 1 or vim.fn.has('win64') == 1 then
+  vim.o.shell = '"C:\\Program Files\\PowerShell\\7\\pwsh.exe"'
+  vim.o.shellcmdflag = '-NoLogo'
+  vim.o.shellquote = ''
+  vim.o.shellxquote = ''
+end
