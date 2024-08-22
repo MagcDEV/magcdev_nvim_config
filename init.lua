@@ -13,10 +13,11 @@ vim.opt.shadafile = "NONE"
 require("config.lazy")
 require("ibl").setup()
 
-vim.cmd.colorscheme("kanagawa")
+--vim.cmd[[colorscheme eldritch]]
+--vim.cmd.colorscheme("kanagawa")
 
---require("catppuccin").setup()
---vim.cmd.colorscheme("catppuccin-mocha")
+require("catppuccin").setup()
+vim.cmd.colorscheme("catppuccin-mocha")
 --require("onedark").load()
 --vim.cmd.colorscheme("onedark")
 
@@ -41,6 +42,9 @@ vim.keymap.set("n", "<F8>", ":tabp<CR>", {})
 
 -- file navigation
 vim.keymap.set("n", "<leader>e", ":Ex<CR>", {})
+
+-- Define a keymap to open diagnostics in a floating window
+vim.keymap.set('n', '<leader>d', ':lua vim.diagnostic.open_float()<CR>', { noremap = true, silent = true })
 
 -- buffer navigation
 vim.keymap.set("n", "<leader>b", ":b#<CR>", {})

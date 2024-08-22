@@ -4,7 +4,7 @@ return {
   priority = 1000,
   config = function()
     require("catppuccin").setup({
-      transparent_background = true, -- disables setting the background color.
+      transparent_background = false, -- disables setting the background color.
     })
   end,
 }
